@@ -145,8 +145,10 @@ un margen superior.
 */
 .main-content {
     padding: 40px 20px;
-    max-width: 1200px; /* Ancho máximo para que no se vea demasiado estirado */
-    margin: 20px auto; /* Centra el contenedor en la página */
+    max-width: 1200px;
+    /* Ancho máximo para que no se vea demasiado estirado */
+    margin: 20px auto;
+    /* Centra el contenedor en la página */
 }
 
 
@@ -162,8 +164,10 @@ estén uno al lado del otro.
 */
 .content-container {
     display: flex;
-    gap: 30px; /* Espacio entre la sección y el aside */
-    flex-wrap: wrap; /* Permite que los elementos se muevan a una nueva fila en pantallas pequeñas */
+    gap: 30px;
+    /* Espacio entre la sección y el aside */
+    flex-wrap: wrap;
+    /* Permite que los elementos se muevan a una nueva fila en pantallas pequeñas */
 }
 
 
@@ -201,7 +205,8 @@ La imagen dentro de la sección.
     width: 100%;
     height: auto;
     border-radius: 8px;
-    margin: 20px 0; /* Espacio arriba y abajo de la imagen */
+    margin: 20px 0;
+    /* Espacio arriba y abajo de la imagen */
 }
 
 
@@ -212,8 +217,10 @@ La imagen dentro de la sección.
 
 
 /* Estilos para los títulos de la sección y el aside */
-.main-section h2, .main-aside h3 {
-    color: #0077b6; /* Un color llamativo para los títulos */
+.main-section h2,
+.main-aside h3 {
+    color: #0077b6;
+    /* Un color llamativo para los títulos */
     margin-bottom: 15px;
 }
 
@@ -243,7 +250,8 @@ El 'aside' ocupa una porción menor del espacio.
 
 
 /* Estilos para las listas de enlaces y redes sociales */
-.aside-links, .social-icons {
+.aside-links,
+.social-icons {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
@@ -294,7 +302,8 @@ El 'aside' ocupa una porción menor del espacio.
 /* Estilos para los íconos de redes sociales. Usamos Flexbox para alinearlos. */
 .social-icons {
     display: flex;
-    gap: 20px; /* Espacio entre los íconos */
+    gap: 20px;
+    /* Espacio entre los íconos */
 }
 
 
@@ -312,7 +321,8 @@ El 'aside' ocupa una porción menor del espacio.
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Hace que los íconos sean circulares */
+    border-radius: 50%;
+    /* Hace que los íconos sean circulares */
     transition: transform 0.3s ease;
 }
 
@@ -324,9 +334,17 @@ El 'aside' ocupa una porción menor del espacio.
 
 
 /* Cambia el color de fondo de cada ícono */
-.fa-twitter { background-color: #1da1f2; }
-.fa-facebook { background-color: #3b5998; }
-.fa-instagram { background-color: #c13584; }
+.fa-twitter {
+    background-color: #1da1f2;
+}
+
+.fa-facebook {
+    background-color: #3b5998;
+}
+
+.fa-instagram {
+    background-color: #c13584;
+}
 
 
 
@@ -337,7 +355,8 @@ El 'aside' ocupa una porción menor del espacio.
 
 /* Efecto al pasar el mouse por encima de los íconos */
 .social-icons a:hover {
-    transform: scale(1.1); /* Agranda el ícono al pasar el mouse */
+    transform: scale(1.1);
+    /* Agranda el ícono al pasar el mouse */
 }
 
 
@@ -392,4 +411,129 @@ El 'aside' ocupa una porción menor del espacio.
 
 .main-footer a:hover {
     color: #ffd166;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+    color: #4A4A4A;
+}
+
+.main-header,
+.main-footer {
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.site-name {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.main-nav {
+    display: none;
+}
+
+.main-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.main-section {
+    flex: 3;
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    min-width: 70%;
+}
+
+.main-aside {
+    flex: 1;
+    background-color: #FFF8DC;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    border: 1px solid #E0D4B8;
+    min-width: 250px;
+}
+
+.main-aside h3,
+.main-aside h2 {
+    color: #4A4A4A;
+    border-bottom: 2px solid #8B4513;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.aside-block {
+    margin-bottom: 20px;
+}
+
+.main-aside ul {
+    padding: 0;
+}
+
+.main-aside li {
+    list-style: none;
+}
+
+.main-aside a,
+.filter-btn {
+    display: block;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #4A4A4A;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    background-color: #E8E5D7;
+}
+
+.main-aside a:hover,
+.filter-btn:hover {
+    background-color: #8B4513;
+    color: white;
+}
+
+.promotion {
+    background-color: #556B2F;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-promo {
+    background-color: #8B4513;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+}
+
+.btn-promo:hover {
+    background-color: #7B3E12;
 }
