@@ -3,50 +3,49 @@ Selector universal (*): aplica estilos a todos los elementos.
 'box-sizing: border-box;' facilita el cálculo de los anchos y las alturas.
 */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 
 
 /* Estilos para el cuerpo de la página */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 
 
 /* Estilos del header - Ya explicados */
 .main-header {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    position: relative;
-    box-shadow: 0 4px 6px rgba(154, 0, 0, 0.1);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("imagenfondo1.jpg");
+  padding: 0 40px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
 
 .main-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(Imagen\ del\ fondo.jpg);
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    filter: brightness(0.4);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1549692520-acc6669e262c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.4);
 }
-
-
 
 
 
@@ -56,32 +55,32 @@ body {
 
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  color: #fff;
 }
 
 
 
 .logo {
-    height: 50px;
-    margin-right: 15px;
+  height: 50px;
+  margin-right: 15px;
 }
 
 
 
 
 .site-name {
-    font-size: 1.8rem;
-    font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 
 
 
 .main-nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 
@@ -92,7 +91,7 @@ body {
 
 
 .main-nav li {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 
@@ -103,11 +102,11 @@ body {
 
 
 .main-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 400;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
 }
 
 
@@ -118,7 +117,7 @@ body {
 
 
 .main-nav a:hover {
-    color: #fca311;
+  color: #fca311;
 }
 
 
@@ -144,11 +143,11 @@ Estilos para el contenedor principal. Le damos espacio en los lados y
 un margen superior.
 */
 .main-content {
-    padding: 40px 20px;
-    max-width: 1200px;
-    /* Ancho máximo para que no se vea demasiado estirado */
-    margin: 20px auto;
-    /* Centra el contenedor en la página */
+  padding: 40px 20px;
+  max-width: 1200px;
+  /* Ancho máximo para que no se vea demasiado estirado */
+  margin: 20px auto;
+  /* Centra el contenedor en la página */
 }
 
 
@@ -156,384 +155,204 @@ un margen superior.
 
 
 
-
-
-/*
-El 'content-container' usará Flexbox para que la sección y el 'aside'
-estén uno al lado del otro.
-*/
-.content-container {
-    display: flex;
-    gap: 30px;
-    /* Espacio entre la sección y el aside */
-    flex-wrap: wrap;
-    /* Permite que los elementos se muevan a una nueva fila en pantallas pequeñas */
+/* ===== DISEÑO DE DOS COLUMNAS ===== */
+.main-container-columns {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
 }
 
-
-
-
-
-
-
-
-/*
-La 'main-section' será más ancha que el 'aside'.
-'flex: 2;' le da el doble de espacio que al 'aside' (que tiene 'flex: 1').
-*/
-.main-section {
-    flex: 2;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.content-area {
+  flex: 3;
 }
 
-
-
-
-
-
-
-
-/*
-La imagen dentro de la sección.
-'width: 100%;' hace que la imagen ocupe todo el ancho de su contenedor.
-'height: auto;' mantiene la proporción de la imagen.
-*/
-.section-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-    /* Espacio arriba y abajo de la imagen */
+.sidebar {
+  flex: 1;
+  background-color: #79704b;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-
-
-
-
-/* Estilos para los títulos de la sección y el aside */
-.main-section h2,
-.main-aside h3 {
-    color: #0077b6;
-    /* Un color llamativo para los títulos */
-    margin-bottom: 15px;
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
+.ficha-producto {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
 
+.ficha-producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
+.btn-comprar {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.btn-comprar:hover {
+  background-color: #1b5e20;
+}
 
+.precio {
+  font-weight: bold;
+  color: #2e7d32;
+}
 
-
-
-/*
-El 'aside' ocupa una porción menor del espacio.
-*/
+/* === Estilo general del aside === */
 .main-aside {
-    flex: 1;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-
-
-
-
-
-
-
-/* Estilos para las listas de enlaces y redes sociales */
-.aside-links,
-.social-icons {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-
-
-
-
-
-
-
-.aside-links li {
-    margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-.aside-links a {
-    text-decoration: none;
-    color: #0077b6;
-    transition: color 0.3s ease;
-}
-
-
-
-
-
-
-
-
-.aside-links a:hover {
-    color: #005f93;
-}
-
-
-
-
-
-
-
-
-/* Estilos para los íconos de redes sociales. Usamos Flexbox para alinearlos. */
-.social-icons {
-    display: flex;
-    gap: 20px;
-    /* Espacio entre los íconos */
-}
-
-
-
-
-
-
-
-
-.social-icons a {
-    color: #fff;
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    /* Hace que los íconos sean circulares */
-    transition: transform 0.3s ease;
-}
-
-
-
-
-
-
-
-
-/* Cambia el color de fondo de cada ícono */
-.fa-twitter {
-    background-color: #1da1f2;
-}
-
-.fa-facebook {
-    background-color: #3b5998;
-}
-
-.fa-instagram {
-    background-color: #c13584;
-}
-
-
-
-
-
-
-
-
-/* Efecto al pasar el mouse por encima de los íconos */
-.social-icons a:hover {
-    transform: scale(1.1);
-    /* Agranda el ícono al pasar el mouse */
-}
-
-
-
-
-
-
-
-
-/*
---- ESTILOS DEL FOOTER ---
-*/
-.main-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-
-
-
-
-
-
-
-.main-footer p {
-    margin-bottom: 5px;
-}
-
-
-
-
-
-
-
-
-.main-footer a {
-    color: #fca311;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-
-
-
-
-
-
-
-.main-footer a:hover {
-    color: #ffd166;
-}
-
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fcfcfc;
-    color: #4A4A4A;
-}
-
-.main-header,
-.main-footer {
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-}
-
-.site-name {
-    margin: 0;
-    font-size: 2.2em;
-}
-
-.main-nav {
-    display: none;
-}
-
-.main-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-
-.content-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-    gap: 20px;
-    flex-wrap: nowrap;
-}
-
-.main-section {
-    flex: 3;
-    background-color: #FFFFFF;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    min-width: 70%;
-}
-
-.main-aside {
-    flex: 1;
-    background-color: #FFF8DC;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    height: fit-content;
-    border: 1px solid #E0D4B8;
-    min-width: 250px;
+  flex: 1;
+  background-color: #FFF8DC;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  border: 1px solid #E0D4B8;
+  min-width: 250px;
 }
 
 .main-aside h3,
 .main-aside h2 {
-    color: #4A4A4A;
-    border-bottom: 2px solid #8B4513;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    font-size: 1.5em;
+  color: #4A4A4A;
+  border-bottom: 2px solid #8B4513;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
 }
 
 .aside-block {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .main-aside ul {
-    padding: 0;
+  padding: 0;
 }
 
 .main-aside li {
-    list-style: none;
+  list-style: none;
 }
 
 .main-aside a,
 .filter-btn {
-    display: block;
-    padding: 8px 12px;
-    margin-bottom: 5px;
-    text-decoration: none;
-    color: #4A4A4A;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-    border: none;
-    cursor: pointer;
-    background-color: #E8E5D7;
+  display: block;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #4A4A4A;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+  background-color: #E8E5D7;
 }
 
 .main-aside a:hover,
 .filter-btn:hover {
-    background-color: #8B4513;
-    color: white;
+  background-color: #8B4513;
+  color: white;
 }
 
+/* === Oferta / Promoción === */
 .promotion {
-    background-color: #556B2F;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 30px;
+  background-color: #556B2F;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .btn-promo {
-    background-color: #8B4513;
-    color: white;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 15px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
+  background-color: #8B4513;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
 }
 
 .btn-promo:hover {
-    background-color: #7B3E12;
+  background-color: #7B3E12;
+}
+
+
+/* Estilos para Tutoriales (Video Responsivo) */
+.seccion-tutoriales {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+/* Sección del video */
+.video-section {
+  margin-top: 40px;
+  text-align: left;
+  /* alineación a la izquierda */
+  padding-left: 40px;
+  /* agrega un pequeño margen si quieres separarlo del borde */
+}
+
+.video-section video {
+  width: 150%;
+  max-width: 300px;
+  border-radius: 10px;
+  display: block;
+  /* asegura que se respete la alineación */
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  text-align: center;
+  color: white;
+  padding: 1em 0;
+  margin-top: 30px;
+}
+
+/* Media Queries para Responsividad Móvil */
+@media (max-width: 768px) {
+
+  /* En móvil, las columnas se apilan: la barra lateral pasa abajo */
+  .main-container-columns {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .content-area {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .hero-section h2 {
+    font-size: 2em;
+  }
+
+  .mini-carrito {
+    right: 15px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+
 }
